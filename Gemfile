@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.5.5'
+# ruby '2.5.5'
+ruby '3.0.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -150,6 +151,9 @@ gem 'faker', '~> 1.9.5'
 gem 'anycable-rails', '~> 1.0', groups: %i[development production]
 
 gem 'rails_same_site_cookie'
+
+# Update bundler to latest 2.x version for Dependabot compatibility
+gem 'bundler', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
